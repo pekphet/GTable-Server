@@ -3,6 +3,8 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	App "./app"
+	Result "./result"
+	Award "./award"
 )
 
 func main() {
@@ -14,5 +16,10 @@ func main() {
 	//})
 	router.GET("/v1/app/update", App.CheckVersion)
 	router.GET("/v1/edit/update", App.ChangeUpdateConf)
+
+	router.GET("/v1/result/list", Result.RetResultListServer)
+	router.POST("/v1/result/upload", Result.ReceiveResultListServer)
+
+	router.GET("/v1/award/code", Award.ExchangeCodeServer)
 	router.Run(":14000")
 }
