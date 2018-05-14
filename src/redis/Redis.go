@@ -51,13 +51,31 @@ func GetSortedSetCount(key string, from int, to int) int {
 
 func PutSortedSet(key string, score int, value string) {
 	c := connect()
-	_, err2 := redis.Int(c.Do("ZADD", key, score, value))
+	_, err2 := c.Do("ZADD", key, score, value)
 	if err2 != nil {
 		fmt.Errorf("get sorted add err: "+key, err2)
 	}
 	defer c.Close()
 }
 
+func SetPutKV(key string, value string) {
+	c := connect()
+	_, err2 := c.Do("SADD", key, value)
+	if err2 != nil {
+		fmt.Errorf("get sorted add err: "+key, err2)
+	}
+	defer c.Close()
+}
+
+func SetHasValue(key string, value string) bool {
+	c := connect()
+	mRet, err2 := redis.Bool(c.Do("SISMEMBER", key, value))
+	if err2 != nil {
+		fmt.Errorf("get sorted add err: "+key, err2)
+	}
+	defer c.Close()
+	return mRet
+}
 
 func connect() redis.Conn {
 	c, err := redis.Dial("tcp", "127.0.0.1:6379")

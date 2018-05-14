@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cfde7f-a2fb-4f06-8517-289c7e16674f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test.go" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/GTable.go" afterPath="$PROJECT_DIR$/src/GTable.go" />
+      <change beforePath="$PROJECT_DIR$/src/award/ExchangeCode.go" afterPath="$PROJECT_DIR$/src/award/ExchangeCode.go" />
+      <change beforePath="$PROJECT_DIR$/src/redis/Redis.go" afterPath="$PROJECT_DIR$/src/redis/Redis.go" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GTable.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GTable.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GTable.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
@@ -53,8 +52,20 @@
       <file leaf-file-name="ExchangeCode.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/award/ExchangeCode.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <folding>
+                <element signature="e#15#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Redis.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/redis/Redis.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="53" column="46" lean-forward="true" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
               <folding>
                 <element signature="e#15#68#0" expanded="true" />
               </folding>
@@ -119,13 +130,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/common/Util.go" />
         <option value="$PROJECT_DIR$/src/app/App.go" />
-        <option value="$PROJECT_DIR$/src/award/ExchangeCode.go" />
         <option value="$PROJECT_DIR$/src/common/Redis.go" />
         <option value="$PROJECT_DIR$/src/common/BaseResp.go" />
         <option value="$PROJECT_DIR$/src/test.go" />
-        <option value="$PROJECT_DIR$/src/redis/Redis.go" />
         <option value="$PROJECT_DIR$/src/result/List.go" />
         <option value="$PROJECT_DIR$/src/GTable.go" />
+        <option value="$PROJECT_DIR$/src/award/ExchangeCode.go" />
+        <option value="$PROJECT_DIR$/src/redis/Redis.go" />
       </list>
     </option>
   </component>
@@ -363,12 +374,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525833375514</updated>
       <workItem from="1525833411334" duration="8101000" />
-      <workItem from="1526263858756" duration="8949000" />
+      <workItem from="1526263858756" duration="9540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17050000" />
+    <option name="totallyTimeSpent" value="17641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
@@ -383,8 +394,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33186814" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33186814" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25106838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -483,16 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redis/Redis.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Util.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -521,16 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/award/ExchangeCode.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="e#15#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/BaseResp.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -545,6 +536,26 @@
           <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
           <folding>
             <element signature="e#14#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/award/ExchangeCode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <element signature="e#15#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redis/Redis.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="53" column="46" lean-forward="true" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
           </folding>
         </state>
       </provider>

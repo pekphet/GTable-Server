@@ -3,6 +3,7 @@ package award
 import (
 	. "../common"
 	"github.com/gin-gonic/gin"
+	Redis "../redis"
 )
 
 type ReqExCode struct {
@@ -19,4 +20,6 @@ type RespExCode struct {
 
 func ExchangeCodeServer(ctx *gin.Context) {
 	ctx.Request.ParseForm()
+	mCode := ctx.Request.FormValue("code")
+	mResult := Redis.GetString(mCode)
 }
