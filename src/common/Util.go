@@ -4,6 +4,8 @@ import (
 	"os"
 	"io/ioutil"
 	"strconv"
+	"github.com/gin-gonic/gin/json"
+	"fmt"
 )
 
 func ReadConfFile(fileName string) []byte {
@@ -11,6 +13,7 @@ func ReadConfFile(fileName string) []byte {
 	if err != nil {
 		panic(err)
 	}
+	recover()
 	defer fi.Close()
 	fd, err := ioutil.ReadAll(fi)
 	return fd
@@ -33,3 +36,14 @@ func AtoI(source string) int {
 		return result
 	}
 }
+
+func ToJson(obj interface{}) string {
+	ret, err := json.Marshal(obj)
+	if err != nil {
+		fmt.Println("err: ", err)
+		recover()
+		return "{}"
+	}
+	return string(ret)
+}
+

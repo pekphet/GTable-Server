@@ -3,8 +3,9 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	App "./app"
-	Result "./result"
-	Award "./award"
+	Result "./app/result"
+	Award "./app/award"
+	Account "./app/account"
 )
 
 func main() {
@@ -14,8 +15,12 @@ func main() {
 	//	c.Request.ParseForm()
 	//	editDebugFile(&c.Request.Form, c)
 	//})
-	router.GET("/v1/app/update", App.CheckVersion)
-	router.GET("/v1/edit/update", App.ChangeUpdateConf)
+	router.GET("/v1/app/update", App.CheckVersionServer)
+	router.GET("/v1/edit/update", App.ChangeUpdateConfServer)
+
+	router.GET("/v1/account/check", Account.CheckNameServer)
+	router.POST("/v1/account/new", Account.AddNameServer)
+	router.POST("/v1/account/store", Account.StoreDataServer)
 
 	router.GET("/v1/result/list", Result.RetResultListServer)
 	router.POST("/v1/result/upload", Result.ReceiveResultListServer)

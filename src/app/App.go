@@ -25,12 +25,12 @@ func init() {
 	json.Unmarshal(ReadConfFile("./update_conf.json"), &update)
 }
 
-func CheckVersion(ctx *gin.Context) {
+func CheckVersionServer(ctx *gin.Context) {
 	ctx.Request.ParseForm()
 	ctx.String(200, updateRespStr(update.CurrentVer > AtoI(ctx.Request.FormValue("version")), update.DownloadUrl))
 }
 
-func ChangeUpdateConf(ctx *gin.Context) {
+func ChangeUpdateConfServer(ctx *gin.Context) {
 	ctx.Request.ParseForm()
 	confBlob, _ := json.Marshal(updateConf{AtoI(ctx.Request.FormValue("newVersion")),
 		ctx.Request.FormValue("downloadUrl"), update.WikiUrl})
@@ -41,7 +41,7 @@ func ChangeUpdateConf(ctx *gin.Context) {
 }
 
 func updateRespStr(hasNew bool, url string) string {
-	str, err := json.Marshal(updateResp{hasNew, url, update.WikiUrl, BaseResp{ErrMsg: "ok"}})
+	str, err := json.Marshal(updateResp{hasNew, url, update.WikiUrl, BaseResp{0, "ok"}})
 	if err != nil {
 		return "{\"errCode\":-1,\"errMsg\":\"" + err.Error() + "\""
 	} else {

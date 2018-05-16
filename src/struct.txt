@@ -1,0 +1,17 @@
+REDIS
+
+HASH:
+(KEY:(FIELD, VALUE))
+h_name_id:  (name, id)
+h_id_info:  (uid, info)
+h_id_eqw:   (uid, eq)
+h_id_eqa:   (uid, eq)
+h_id_eqr:   (uid, eq)
+
+
+SET:
+(KEY:VALUE)
+
+ZSET:
+(KEY: SCORE, VALUE)
+z_top_list: floor, uid
