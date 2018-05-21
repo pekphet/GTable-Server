@@ -37,7 +37,11 @@ type Equip struct {
 }
 
 type EquipInfo struct {
-	Id int `json:"id"`
+	Id           int    `json:"id"`
+	Name         string `json:"name"`
+	Position     string `json:"position"`
+	BaseProperty int    `json:"baseProperty"`
+	BaseLevel    int    `json:"baseLevel"`
 }
 
 type IntValue struct {
@@ -83,6 +87,7 @@ func hasUser(name string) bool {
 }
 
 var AccountMutex sync.Mutex
+
 func addUser(name string) {
 	AccountMutex.Lock()
 	Redis.HashPutKFV(RKEY_H_NAME, name, strconv.Itoa(Redis.IncKey(RKEY_V_ID_PTR)))

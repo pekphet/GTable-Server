@@ -29,9 +29,13 @@ func ExchangeCodeServer(ctx *gin.Context) {
 		ctx.String(200, ToJson(BaseResp{2001, "兑换码不存在"}))
 		return
 	}
-	if uid := GetUid(name); Redis.SetHasValue(mCode, uid) {
-		ctx.String(200, ToJson(BaseResp{2002, "已经兑换过了"}))
-		return
-	}
+	//if uid := GetUid(name); Redis.SetHasValue(mCode, uid) {
+	//	ctx.String(200, ToJson(BaseResp{2002, "已经兑换过了"}))
+	//} else {
+	//	Redis.SetPut(mCode, uid)
+	//	ctx.String(200, result)
+	//}
+	uid := GetUid(name)
+	Redis.SetPut(mCode, uid)
 	ctx.String(200, result)
 }

@@ -79,7 +79,7 @@ func getKeyByRoleType(roleType string) (typeKey string) {
 	case "KNIGHT":
 		typeKey = RKEY_Z_TOP_KNT
 	case "FIGHTER":
-		typeKey = RKEY_Z_TOP_KNT
+		typeKey = RKEY_Z_TOP_FHT
 	default:
 		typeKey = RKEY_Z_TOP_FHT
 	}
